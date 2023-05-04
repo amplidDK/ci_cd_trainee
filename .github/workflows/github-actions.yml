@@ -1,0 +1,17 @@
+name: Github Actions Demo
+on: [push]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "We start here"
+      - run: echo "Then we start checkout"
+      - name: Run flake8
+        uses: julianwachholz/flake8-action@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+      - run: echo "Checkout end"
+      - name: List files in repo
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "Job status is ${{ job.status }}."

@@ -8,6 +8,8 @@ packages = [{include = "devops_trainee"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+flake8 = "^6.0.0"
+pep8-naming = "^0.13.3"
 
 
 [build-system]
