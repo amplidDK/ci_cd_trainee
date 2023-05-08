@@ -10,7 +10,7 @@ jobs:
         uses: julianwachholz/flake8-action@v2
         with:
           checkName: "Python Lint"
-          plugins: flake8-spellcheck
+          plugins: pep8-naming
           config: setup.cfg
 
       - name: Checkout
