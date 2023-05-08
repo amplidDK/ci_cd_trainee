@@ -8,6 +8,11 @@ jobs:
       - run: echo "Then we start checkout"
       - name: Run flake8
         uses: julianwachholz/flake8-action@v2
+        with:
+          checkName: "Python Lint"
+          plugins: flake8-spellcheck
+          config: setup.cfg
+
       - name: Checkout
         uses: actions/checkout@v3
       - run: echo "Checkout end"
